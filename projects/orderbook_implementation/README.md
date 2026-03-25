@@ -2,7 +2,7 @@
 
 This project is a **single-threaded** limit order book prototype focused on low-latency data-structure design, plus a higher-level `OrderBook` wrapper with accounts and trading helpers.
 
-It includes:
+Including:
 - **Engine**: fixed-size order pool (no allocations during matching/cancel), FIFO per price level, and fast best-bid/ask lookup.
 - **Wrapper**: user balances with locked funds, `add_bid`/`add_ask`, plus:
   - **IOC** orders (`add_bid_ioc`, `add_ask_ioc`) to cancel unfilled remainder immediately
@@ -12,9 +12,7 @@ It includes:
 ## Motivation
 Build an allocation-light matching engine, then wrap it with just enough “exchange realism” (IOC + market, cancels, balances) to make behavior and performance visible in a single runnable demo.
 
-## Under the hood (what to talk about in your application)
-
-Key implementation points you can describe:
+## Key implementation:
 
 1. **Memory layout & allocation strategy**
    - The engine pre-allocates arrays for orders and keeps a free-list for reusing nodes.
@@ -24,8 +22,6 @@ Key implementation points you can describe:
    - Non-empty levels are tracked with a bitset; best bid/ask is found via bit operations.
 4. **Matching loop mechanics**
    - For an aggressive order, the engine walks from the current best maker level and executes trades until either the taker is filled or the price condition fails.
-
-This is intentionally a *performance-leaning prototype* rather than a production exchange.
 
 ## Build and run
 
@@ -60,18 +56,18 @@ If you're at the repo root, run the same commands but prefix paths with `./cpp_p
 - `include/orderbook.hpp` + `src/OrderBook.cpp`: account wrapper (balances/locks, order submission, cancel, settlement).
 - `src/main.cpp`: demo/bench harness + interactive `--ui`.
 
-## How to test (quick checklist)
+## Flags
 1. **Build:** follow the commands in “Build and run”.
 2. **Correctness:** run `--test` (verifies FIFO behavior + cancel in the engine).
 3. **Feature demo:** run `--demo` (shows FIFO at same price, IOC leaving no remainder, and cancel working; also prints demo stats).
 4. **Interactive UI:** run `--ui` and use the menu to place/cancel orders and watch best bid/ask + depth.
 5. **Speed tests:** run `--bench` (engine-only) and `--bench-wrapper` (end-to-end wrapper work).
 
-### Interactive UI notes
+### UI notes
 - `--ui` starts a menu-driven terminal app (sign up, place orders, cancel, view depth/balances).
 - Price inputs are **cents** (internal units): e.g. `15050` means `$150.50`.
 
-### UI test walkthrough (fast)
+### UI test walkthrough
 - Type `1` (sign up), enter a username.
 - Type `2` (add balance): enter quote in **cents** (e.g. `1000000` = $10,000.00) and base in **shares** (non-negative integer).
 - Type `3` (view market).

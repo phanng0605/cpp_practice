@@ -6,9 +6,7 @@ This project implements a **work-stealing scheduler** in C++20:
 - If a worker runs out of local work, it **steals** from other workers.
 - The pool exposes `submit()` (returns `std::future`) and a `wait_idle()` API.
 
-## Under the hood (what to talk about in the application)
-
-What you can emphasize:
+## Details
 
 - **Work placement**: `submit()` pushes tasks to a chosen worker (round-robin), so locality is improved.
 - **Stealing strategy**: thieves take from the opposite end to reduce contention and improve cache behavior.
@@ -29,7 +27,7 @@ cmake --build build -j
 
 ## Notes
 
-The internal deque uses `std::mutex` for clarity. The learning focus is the scheduler architecture: how work moves between threads and how the pool knows when it is truly idle.
+The internal deque uses `std::mutex` for clarity. Scheduler architecture: how work moves between threads and how the pool knows when it is truly idle.
 
 ## Code layout
 - `include/work_stealing_thread_pool.hpp`: thread pool + work stealing logic.

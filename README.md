@@ -21,9 +21,9 @@ If you run from the repo root (without `cd cpp_practice/`), prefix paths with `.
 
 Idea: a lock-free queue for exactly 1 producer + 1 consumer.
 
-What you'll practice:
+Implementation:
 - C++ memory ordering (`release`/`acquire`) for correctness.
-- Throughput + false sharing impact.
+- Throughput + false sharing.
 
 ```bash
 ./build/projects/spsc_ringbuffer/spsc_ringbuffer --test
@@ -34,9 +34,9 @@ What you'll practice:
 
 Idea: a task scheduler where idle workers steal work from busy workers.
 
-What you'll practice:
+Implementation:
 - Work stealing for load balancing on irregular workloads.
-- A clean `submit()`/`future` + well-defined `wait_idle()` correctness point.
+- `submit()`/`future` + `wait_idle()`
 
 ```bash
 ./build/projects/workstealing_pool/workstealing_pool --test
@@ -47,7 +47,7 @@ What you'll practice:
 
 Idea: a fixed-size, single-threaded limit order book engine plus an account-level wrapper.
 
-What you'll practice:
+Implementation:
 - Allocation-light matching with FIFO per price level and fast best bid/ask.
 - Exchange-like order controls (IOC + market), cancels, and end-to-end benchmarks.
 
