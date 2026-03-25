@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bytedance/Downloads/cpp_learning
+CMAKE_SOURCE_DIR = /Users/bytedance/Downloads/cpp_learning/cpp_practice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bytedance/Downloads/cpp_learning/build
+CMAKE_BINARY_DIR = /Users/bytedance/Downloads/cpp_learning/cpp_practice/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Downloads/cpp_learning/build/CMakeFiles /Users/bytedance/Downloads/cpp_learning/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Downloads/cpp_learning/cpp_practice/build/CMakeFiles /Users/bytedance/Downloads/cpp_learning/cpp_practice/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Downloads/cpp_learning/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/Downloads/cpp_learning/cpp_practice/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,43 +117,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hrt_spsc_ringbuffer
+# Target rules for targets named spsc_ringbuffer
 
 # Build rule for target.
-hrt_spsc_ringbuffer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hrt_spsc_ringbuffer
-.PHONY : hrt_spsc_ringbuffer
+spsc_ringbuffer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spsc_ringbuffer
+.PHONY : spsc_ringbuffer
 
 # fast build rule for target.
-hrt_spsc_ringbuffer/fast:
-	$(MAKE) $(MAKESILENT) -f projects/hrt_spsc_ringbuffer/CMakeFiles/hrt_spsc_ringbuffer.dir/build.make projects/hrt_spsc_ringbuffer/CMakeFiles/hrt_spsc_ringbuffer.dir/build
-.PHONY : hrt_spsc_ringbuffer/fast
+spsc_ringbuffer/fast:
+	$(MAKE) $(MAKESILENT) -f projects/spsc_ringbuffer/CMakeFiles/spsc_ringbuffer.dir/build.make projects/spsc_ringbuffer/CMakeFiles/spsc_ringbuffer.dir/build
+.PHONY : spsc_ringbuffer/fast
 
 #=============================================================================
-# Target rules for targets named hrt_workstealing_pool
+# Target rules for targets named workstealing_pool
 
 # Build rule for target.
-hrt_workstealing_pool: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hrt_workstealing_pool
-.PHONY : hrt_workstealing_pool
+workstealing_pool: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 workstealing_pool
+.PHONY : workstealing_pool
 
 # fast build rule for target.
-hrt_workstealing_pool/fast:
-	$(MAKE) $(MAKESILENT) -f projects/hrt_workstealing_pool/CMakeFiles/hrt_workstealing_pool.dir/build.make projects/hrt_workstealing_pool/CMakeFiles/hrt_workstealing_pool.dir/build
-.PHONY : hrt_workstealing_pool/fast
+workstealing_pool/fast:
+	$(MAKE) $(MAKESILENT) -f projects/workstealing_pool/CMakeFiles/workstealing_pool.dir/build.make projects/workstealing_pool/CMakeFiles/workstealing_pool.dir/build
+.PHONY : workstealing_pool/fast
 
 #=============================================================================
-# Target rules for targets named hrt_orderbook
+# Target rules for targets named orderbook_implementation
 
 # Build rule for target.
-hrt_orderbook: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hrt_orderbook
-.PHONY : hrt_orderbook
+orderbook_implementation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 orderbook_implementation
+.PHONY : orderbook_implementation
 
 # fast build rule for target.
-hrt_orderbook/fast:
-	$(MAKE) $(MAKESILENT) -f projects/hrt_orderbook/CMakeFiles/hrt_orderbook.dir/build.make projects/hrt_orderbook/CMakeFiles/hrt_orderbook.dir/build
-.PHONY : hrt_orderbook/fast
+orderbook_implementation/fast:
+	$(MAKE) $(MAKESILENT) -f projects/orderbook_implementation/CMakeFiles/orderbook_implementation.dir/build.make projects/orderbook_implementation/CMakeFiles/orderbook_implementation.dir/build
+.PHONY : orderbook_implementation/fast
 
 # Help Target
 help:
@@ -163,9 +163,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... hrt_orderbook"
-	@echo "... hrt_spsc_ringbuffer"
-	@echo "... hrt_workstealing_pool"
+	@echo "... orderbook_implementation"
+	@echo "... spsc_ringbuffer"
+	@echo "... workstealing_pool"
 .PHONY : help
 
 

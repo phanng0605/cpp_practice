@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 project(orderbook_implementation LANGUAGES CXX)
 
 add_executable(orderbook_implementation
+  src/OrderBook.cpp
   src/main.cpp
 )
 

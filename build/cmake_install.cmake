@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bytedance/Downloads/cpp_learning
+# Install script for directory: /Users/bytedance/Downloads/cpp_learning/cpp_practice
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,23 +39,23 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bytedance/Downloads/cpp_learning/build/projects/hrt_spsc_ringbuffer/cmake_install.cmake")
+  include("/Users/bytedance/Downloads/cpp_learning/cpp_practice/build/projects/spsc_ringbuffer/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bytedance/Downloads/cpp_learning/build/projects/hrt_workstealing_pool/cmake_install.cmake")
+  include("/Users/bytedance/Downloads/cpp_learning/cpp_practice/build/projects/workstealing_pool/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bytedance/Downloads/cpp_learning/build/projects/hrt_orderbook/cmake_install.cmake")
+  include("/Users/bytedance/Downloads/cpp_learning/cpp_practice/build/projects/orderbook_implementation/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/bytedance/Downloads/cpp_learning/build/install_local_manifest.txt"
+  file(WRITE "/Users/bytedance/Downloads/cpp_learning/cpp_practice/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -71,6 +71,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/bytedance/Downloads/cpp_learning/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/bytedance/Downloads/cpp_learning/cpp_practice/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

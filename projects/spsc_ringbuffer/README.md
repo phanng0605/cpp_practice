@@ -34,3 +34,7 @@ cmake --build build -j
 
 This demo template uses compile-time capacity (power-of-two). The benchmark supports a small set of powers of two.
 
+## Code layout
+- `include/spsc_ringbuffer.hpp`: the ring buffer implementation (atomics + release/acquire).
+- `src/main.cpp`: `--test` correctness check + `--bench` throughput run.
+

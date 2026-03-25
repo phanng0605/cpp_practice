@@ -31,3 +31,7 @@ cmake --build build -j
 
 The internal deque uses `std::mutex` for clarity. The learning focus is the scheduler architecture: how work moves between threads and how the pool knows when it is truly idle.
 
+## Code layout
+- `include/work_stealing_thread_pool.hpp`: thread pool + work stealing logic.
+- `src/main.cpp`: `--test` + `--bench` harness.
+
