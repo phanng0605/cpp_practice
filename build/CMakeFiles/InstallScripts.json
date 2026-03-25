@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/bytedance/Downloads/cpp_learning/build/cmake_install.cmake",
+		"/Users/bytedance/Downloads/cpp_learning/build/projects/hrt_spsc_ringbuffer/cmake_install.cmake",
+		"/Users/bytedance/Downloads/cpp_learning/build/projects/hrt_workstealing_pool/cmake_install.cmake",
+		"/Users/bytedance/Downloads/cpp_learning/build/projects/hrt_orderbook/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
