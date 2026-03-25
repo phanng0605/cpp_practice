@@ -1,4 +1,4 @@
-# C++ Systems Practice (cpp_practice)
+# C++ Systems Practice
 
 This directory contains three small, runnable C++20 projects focused on systems programming:
 memory ordering + lock-free queues, concurrency/scheduling, and an allocation-free order book prototype.
