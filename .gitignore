@@ -1,0 +1,15 @@
+# Build outputs (CMake)
+build/
+build_orderbook/
+
+# Common CMake files (in case they appear outside build/)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# IDE / OS noise
+.vscode/
+.DS_Store
+*.swp
+*.swo
+
